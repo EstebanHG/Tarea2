@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_compra">
+
+    <fragment
+        android:id="@+id/nav_compra"
+        android:name="com.tarea2.ui.Compra.CompraFragment"
+        android:label="@string/menu_compra"
+        tools:layout="@layout/fragment_compra" >
+        <action
+            android:id="@+id/action_nav_compra_to_addCompraFragment"
+            app:destination="@id/addCompraFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.tarea2.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.tarea2.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/addCompraFragment"
+        android:name="com.tarea2.ui.Compra.AddCompraFragment"
+        android:label="fragment_add_compra"
+        tools:layout="@layout/fragment_add_compra" >
+        <action
+            android:id="@+id/action_addCompraFragment_to_nav_compra"
+            app:destination="@id/nav_compra" />
+    </fragment>
+</navigation>
